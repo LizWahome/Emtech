@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "949773776518",
+    "project_id": "em-tech-c4ee3",
+    "storage_bucket": "em-tech-c4ee3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949773776518:android:7f259bcbf46197586f0307",
+        "android_client_info": {
+          "package_name": "ke.co.emtech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzDLhFDMeEyIjQc1iV79coaaxaZoowMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
