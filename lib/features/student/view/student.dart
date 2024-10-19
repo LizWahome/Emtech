@@ -19,7 +19,7 @@ class StudentPage extends StatefulWidget {
 class _StudentPageState extends State<StudentPage> {
   List<CreateCourse> courses = [];
   List<CreateCourse> enrolledCourses = [];
-   enrollCourse(CreateCourse course) {
+  enrollCourse(CreateCourse course) {
     if (!enrolledCourses.contains(course)) {
       setState(() {
         enrolledCourses.add(course);
@@ -65,8 +65,8 @@ class _StudentPageState extends State<StudentPage> {
                   ],
                 ),
               ),
-              HeadingText(text: "Latest Courses"),
-              SizedBox(
+              if(enrolledCourses.isNotEmpty)HeadingText(text: "Latest Courses"),
+             if(enrolledCourses.isNotEmpty) SizedBox(
                   height: 300,
                   child: PageView.builder(
                       scrollDirection: Axis.horizontal,
@@ -115,10 +115,12 @@ class _StudentPageState extends State<StudentPage> {
                     if (!snapshot.hasData) {
                       return Center(child: CircularProgressIndicator());
                     }
+                    courses.clear();
                     snapshot.data!.docs.forEach((element) {
                       CreateCourse course = CreateCourse.fromDocument(element);
                       courses.add(course);
                     });
+
                     return ListView.builder(
                         itemBuilder: (context, index) {
                           final course = courses[index];

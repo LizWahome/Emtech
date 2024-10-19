@@ -202,6 +202,7 @@ class _InstructorPageState extends State<InstructorPage> {
                 if (!snapshot.hasData) {
                   return Center(child: CircularProgressIndicator());
                 }
+                courses.clear();
                 snapshot.data!.docs.forEach((element) {
                   CreateCourse course = CreateCourse.fromDocument(element);
                   courses.add(course);
